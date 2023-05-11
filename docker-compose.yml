@@ -1,0 +1,15 @@
+services:
+  mysql:
+    network_mode: bridge
+    restart: always
+
+    hostname: mssql
+    container_name: mssql
+    image: mcr.microsoft.com/mssql/server:2017-latest
+
+    ports:
+      - "1433:1433"
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: root
