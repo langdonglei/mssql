@@ -1,5 +1,5 @@
 services:
-  mysql:
+  mssql:
     network_mode: bridge
     restart: always
 
